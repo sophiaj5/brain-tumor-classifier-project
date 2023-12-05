@@ -11,9 +11,9 @@ from keras.preprocessing import image
 import warnings
 warnings.filterwarnings("ignore")
 
-st.set_page_config(page_title="Brain Tumor Analyzer", layout="wide")
+st.set_page_config(page_title="Brain Tumor Classifier", layout="wide")
 
-st.title('Brain Tumor Analyzer')
+st.title('Brain Tumor Classifier')
 
 def load_model():
     model = tf.keras.models.load_model('../models/model4.h5')
