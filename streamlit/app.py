@@ -20,7 +20,7 @@ def loading_model():
 
 with st.sidebar:
     st.header("Welcome to the Brain Tumor Classifier!")
-    st.write("Experience the power of advanced medical imaging with our Brain Tumor Analyzer app. Simply upload your brain scan, and our cutting-edge machine learning model will analyze it to provide insights into potential conditions such as glioma, pituitary tumor, meningioma, or no tumor, along with the accuracy level of each diagnosis.")
+    st.info("Experience the power of advanced medical imaging with our Brain Tumor Analyzer app. Simply upload your brain scan, and our cutting-edge machine learning model will analyze it to provide insights into potential conditions such as glioma, pituitary tumor, meningioma, or no tumor, along with the accuracy level of each diagnosis.")
     st.write("Upload your brain scan to get started!")
 
 file = st.file_uploader('', type=["jpg", "png", "jfif", 'jpeg'])
@@ -54,7 +54,7 @@ else:
         st.info("A glioma is a type of cancerous tumor that originates in the glial cells, which play a crucial role in supporting the brain and spinal cord. Gliomas encompass a diverse range of tumor types, each characterized by distinct appearances and requiring tailored treatment approaches. Please consult with your doctor for further treatment options.")
     elif tumors[np.argmax(predictions)] == 1:
         st.write("You most likely have a meningioma.")
-        st.info("A meningioma is a tumor that develops within the protective membrances surrounding the brain and spinal cord. Predominantly found in adults, meningiomas come in various types, each distinguished by its appearance. The size and location of the tumor significantly influences symptoms and treatment options. Please consult with your doctor for further treatment options.")
+        st.info("A meningioma is a tumor that develops within the protective membranes surrounding the brain and spinal cord. Predominantly found in adults, meningiomas come in various types, each distinguished by its appearance. The size and location of the tumor significantly influences symptoms and treatment options. Please consult with your doctor for further treatment options.")
     elif tumors[np.argmax(predictions)] == 2:
         st.write("You most likely do not have a tumor!")
         st.info("Congratulations! You most likely do not have a tumor. Be sure to follow up with your doctor and attend any future check-ups.")
